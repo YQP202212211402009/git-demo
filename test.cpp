@@ -9,7 +9,8 @@ int h[maxn],to[maxm],ne[maxm],idx=1;
 int vis[maxn],match[maxn];
 char g[maxn][maxn];
 int a[maxn][maxn];
-//�������������ɶ�������˾��������˼��������� 
+//ÎÒÕæ·þÁËÊÇÊÇÊÇÉ¶¶¼È÷µ½ÁË¾­ËÀ°¡´òÁË¼¸µãÈö°¡ÊÇ 
+//修改标志修改标志修改标志
 void add(int a,int b)
 {
     to[idx]=b;ne[idx]=h[a];h[a]=idx++;
@@ -21,12 +22,12 @@ int dfs(int u)
         int v=to[i];
         if(vis[v]) continue;
         vis[v]=1;
-        if(match[v]==0)//还没有匹配
+        if(match[v]==0)//è¿˜æ²¡æœ‰åŒ¹é…
         {
             match[v]=u;
             return 1;
         }
-        else if(dfs(match[v]))//可以让出来
+        else if(dfs(match[v]))//å¯ä»¥è®©å‡ºæ¥
         {
             match[v]=u;
             return 1;
