@@ -9,6 +9,7 @@ int h[maxn],to[maxm],ne[maxm],idx=1;
 int vis[maxn],match[maxn];
 char g[maxn][maxn];
 int a[maxn][maxn];
+//我真服了是是是啥都洒到了经死啊打了几点撒啊是 
 void add(int a,int b)
 {
     to[idx]=b;ne[idx]=h[a];h[a]=idx++;
